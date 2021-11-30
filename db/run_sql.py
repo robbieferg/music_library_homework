@@ -7,13 +7,13 @@ def run_sql(sql, values = None):
     results = []
 
     try:
-        conn = psycopg2.connect("dbname='music_library")
+        conn = psycopg2.connect("dbname='music_library'")
         cur = conn.cursor(cursor_factory=extras.DictCursor)
         cur.execute(sql, values)
         conn.commit()
         results = cur.fetchall()
         cur.close()
-    except (Exception, psycopg2.DatabaseError) as error
+    except (Exception, psycopg2.DatabaseError) as error:
         print(error)
     finally:
         if conn is not None:
