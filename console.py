@@ -28,5 +28,9 @@ print(result[0].title)
 artist_repository.update(artist_1)
 album_repository.update(album_1)
 
+
+album_repository.delete(album_2)
+artist_repository.delete(artist_2)
+
 pdb.set_trace()
 

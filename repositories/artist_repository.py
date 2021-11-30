@@ -13,6 +13,11 @@ def delete_all():
     sql = "DELETE  FROM artists"
     run_sql(sql)
 
+def delete(artist):
+    sql = "DELETE  FROM artists WHERE id = %s"
+    values = [artist.id]
+    run_sql(sql, values)
+
 def select(id):
     artist = None
     sql = "SELECT * FROM artists WHERE id = %s"
