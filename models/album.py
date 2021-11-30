@@ -3,4 +3,5 @@ class Album:
         self.title = title
         self.artist = artist
         self.genre = genre
+        self.id = id
         
